@@ -1,0 +1,15 @@
+%{
+int macro=0,header=0;
+%}
+%%
+#define {macro++;}
+#include {header++;}
+%%
+int yywrap(void){}
+int main() 
+{
+yylex();
+printf("macros=%d",macro);
+printf("header=%d",header);
+return 0;
+}

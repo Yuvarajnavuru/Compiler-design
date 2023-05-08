@@ -1,0 +1,14 @@
+%{
+%}
+%%
+"if"|"else"|"break"|"continue"|"else" {printf("\n it is a keyword \n");}
+.+ {printf("\n it is an identifier \n");}
+%%
+int yywrap(void){}
+int main()
+{
+printf("enter the word: \n");
+yylex();
+printf("\n");
+return 0;
+}

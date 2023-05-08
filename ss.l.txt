@@ -1,0 +1,14 @@
+%{
+%}
+%%
+[A-Za-z_][A-Za-z0-9_]+ {printf("\n alphabet is valid\n");}
+.+ {printf("\n alphabet is invalid\n");}
+%%
+int yywrap(void){}
+int main()
+{
+printf("\n enter the alphabet");
+yylex();
+printf("\n");
+return 0;
+}

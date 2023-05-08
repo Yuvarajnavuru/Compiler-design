@@ -1,0 +1,14 @@
+%{
+%}
+%%
+[a-z][A-Z]+ {printf("\n valid identifier\n");}
+.+ {printf("\n invalid identifier\n");}
+%%
+int yywrap(void){}
+int main()
+{
+printf("\n enter the identifier");
+yylex();
+printf("\n");
+return 0;
+}
