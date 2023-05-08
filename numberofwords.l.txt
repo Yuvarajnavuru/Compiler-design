@@ -1,0 +1,14 @@
+%{
+int word=0;
+%}
+%%
+[a-z A-Z]+  {word++;}
+%%
+int yywrap(void){}
+int main()
+{
+yylex();
+printf("count the number of words:%d",word);
+printf("\n");
+return 0;
+}
