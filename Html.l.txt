@@ -1,0 +1,14 @@
+%{
+int html=0;
+%}
+%%
+"<"[a-zA.Z.]+">" {html++;printf("html tags=%s",yytext);}
+.;
+%%
+int yywrap(){}
+int main()
+{
+yylex();
+printf("number of html tags=%d\n",html);
+return 0;
+}
