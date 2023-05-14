@@ -1,0 +1,15 @@
+%{
+%}
+%%
+[a-z]+:"//"[a-z]+.[a-z]+".com" {printf(\n url is verified");}
+.+ {printf("\n url is not verified");}
+%%
+int yywrap(void){}
+int main()
+{
+yylex();
+printf("\n enter the url: \n");
+yylex();
+printf("\n");
+return 0;
+}
