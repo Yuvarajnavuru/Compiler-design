@@ -1,0 +1,27 @@
+%{
+
+%}
+
+%%
+
+"+"|"-"|"/"|"||"|"&&"|"*"|"%"|"|"|"&"|"<"|">" printf("mathematical operator");
+
+.+ printf("not a mathematical operator");
+
+%%
+
+int yywrap(void){}
+
+int main()
+
+{
+
+printf("enter:");
+
+yylex();
+
+printf("\n");
+
+return 0;
+
+}
